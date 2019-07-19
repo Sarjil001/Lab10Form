@@ -8,6 +8,9 @@ namespace Lab10
 {
     static class Program
     {
+        public static MainForm mainForm { get; set; }
+        public static EndForm endForm { get; set; }
+        public static StartForm startForm { get; set; }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +19,10 @@ namespace Lab10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            mainForm = new MainForm();
+            endForm = new EndForm();
+            startForm = new StartForm();
+            Application.Run(new StartForm());
         }
     }
 }
